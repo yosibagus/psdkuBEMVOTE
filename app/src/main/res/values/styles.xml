@@ -6,6 +6,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorBlack</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <!-- memberikan warna hitam pada icon2 layar diatas hp -->
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
 </resources>

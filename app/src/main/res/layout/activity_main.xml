@@ -47,6 +47,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewVote"
                 android:layout_marginTop="5dp"
                 app:cardElevation="2dp"
                 app:cardCornerRadius="10dp"
@@ -73,6 +74,7 @@
                         android:src="@drawable/voting"/>
 
                     <TextView
+                        android:id="@+id/namaMenu"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_alignParentBottom="true"
@@ -88,6 +90,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewResult"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
@@ -95,9 +98,12 @@
                 app:cardCornerRadius="10dp"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
-                android:layout_height="230dp">
+                android:layout_height="230dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
 
                 <LinearLayout
+                    android:id="@+id/linkToResult"
                     android:background="#eff4fd"
                     android:layout_width="match_parent"
                     android:orientation="vertical"
