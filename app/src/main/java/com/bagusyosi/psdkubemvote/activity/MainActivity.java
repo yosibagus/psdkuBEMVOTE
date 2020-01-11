@@ -1,4 +1,4 @@
-package com.bagusyosi.psdkubemvote;
+package com.bagusyosi.psdkubemvote.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -10,10 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.bagusyosi.psdkubemvote.activity.ProceduresActivity;
-import com.bagusyosi.psdkubemvote.activity.ProfileActivity;
-import com.bagusyosi.psdkubemvote.activity.ResultActivity;
-import com.bagusyosi.psdkubemvote.activity.VotingActivity;
+import com.bagusyosi.psdkubemvote.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
