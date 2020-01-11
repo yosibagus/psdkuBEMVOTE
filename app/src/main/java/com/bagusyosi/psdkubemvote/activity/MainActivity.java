@@ -9,30 +9,29 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bagusyosi.psdkubemvote.R;
+
+import org.w3c.dom.Text;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.menuVoting)
-    LinearLayout linkToVote;
-    @BindView(R.id.cardViewVote)
-    CardView cardToVote;
-    @BindView(R.id.cardViewResult)
-    CardView cardToRestult;
-    @BindView(R.id.linkToResult)
-    LinearLayout linkToResult;
-    @BindView(R.id.cardViewProcedures)
-    CardView cardToProcedures;
-    @BindView(R.id.linkToProcedures)
-    LinearLayout linkToProcedures;
-    @BindView(R.id.cardViewProfile)
-    CardView cardToProfile;
-    @BindView(R.id.linkToProfile)
-    LinearLayout linkToProfile;
+    @BindView(R.id.namaMenu) TextView namaMenu;
+    @BindView(R.id.namaMenuProfile) TextView namaMenuProfile;
+    @BindView(R.id.namaMenuResult) TextView namaMenuResult;
+    @BindView(R.id.namaMenuProsedure) TextView namaMenuProcedure;
+    @BindView(R.id.menuVoting) LinearLayout linkToVote;
+    @BindView(R.id.cardViewVote) CardView cardToVote;
+    @BindView(R.id.cardViewResult) CardView cardToRestult;
+    @BindView(R.id.linkToResult) LinearLayout linkToResult;
+    @BindView(R.id.cardViewProcedures) CardView cardToProcedures;
+    @BindView(R.id.linkToProcedures) LinearLayout linkToProcedures;
+    @BindView(R.id.cardViewProfile) CardView cardToProfile;
+    @BindView(R.id.linkToProfile) LinearLayout linkToProfile;
 
 
     Context context;
@@ -50,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 linkToVote.setBackgroundColor(Color.parseColor("#ff6263"));
+                namaMenu.setTextColor(Color.WHITE);
                 toVote();
             }
         });
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 linkToResult.setBackgroundColor(Color.parseColor("#7FA9F7"));
+                namaMenuResult.setTextColor(Color.WHITE);
                 toResult();
             }
         });
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 linkToProfile.setBackgroundColor(Color.parseColor("#FABE7A"));
+                namaMenuProfile.setTextColor(Color.WHITE);
                 toProfile();
             }
         });
@@ -73,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
         cardToProcedures.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                linkToProcedures.setBackgroundColor(Color.parseColor("#6EF879"));
+                linkToProcedures.setBackgroundColor(Color.parseColor("#77E280"));
+                namaMenuProcedure.setTextColor(Color.WHITE);
                 toProcedures();
             }
         });
@@ -100,9 +103,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onPostResume() {
         super.onPostResume();
         linkToVote.setBackgroundColor(Color.parseColor("#ffeeef"));
+        namaMenu.setTextColor(Color.BLACK);
         linkToResult.setBackgroundColor(Color.parseColor("#eff4fd"));
+        namaMenuResult.setTextColor(Color.BLACK);
         linkToProfile.setBackgroundColor(Color.parseColor("#FFF7EE"));
+        namaMenuProfile.setTextColor(Color.BLACK);
         linkToProcedures.setBackgroundColor(Color.parseColor("#edfaee"));
+        namaMenuProcedure.setTextColor(Color.BLACK);
     }
 
     private void animasiInOut() {

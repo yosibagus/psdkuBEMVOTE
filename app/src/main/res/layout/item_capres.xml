@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:layout_marginBottom="7dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="360dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="6dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgCalon"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/example"/>
+
+            <TextView
+                android:id="@+id/nomerUrutCalon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomer 1"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:fontFamily="@font/roboto"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/namaCapres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hasan"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "/>
+
+                <TextView
+                    android:id="@+id/namaCawapres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hasan"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sloganCalon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Makan untuk hidup, bukan hidup untuk makan"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/btnToConfirm"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/colorPrimary"-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:text="Voting"/>-->
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
