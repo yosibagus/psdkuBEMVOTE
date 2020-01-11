@@ -141,6 +141,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewProfile"
                 android:layout_marginTop="5dp"
                 app:cardElevation="2dp"
                 app:cardCornerRadius="10dp"
@@ -148,10 +149,13 @@
                 android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
-                android:layout_height="230dp">
+                android:layout_height="230dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
 
                 <LinearLayout
-                    android:background="#FDF5FF"
+                    android:id="@+id/linkToProfile"
+                    android:background="#FFF7EE"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -179,6 +183,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewProcedures"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
@@ -189,6 +194,7 @@
                 android:layout_height="230dp">
 
                 <LinearLayout
+                    android:id="@+id/linkToProcedures"
                     android:background="#edfaee"
                     android:layout_width="match_parent"
                     android:orientation="vertical"
@@ -217,8 +223,6 @@
 
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>

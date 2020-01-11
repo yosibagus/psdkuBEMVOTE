@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".activity.VotingActivity"/>
         <activity android:name=".activity.ResultActivity"/>
+        <activity android:name=".activity.ProfileActivity"/>
+        <activity android:name=".activity.ProceduresActivity"/>
     </application>
 
 </manifest>

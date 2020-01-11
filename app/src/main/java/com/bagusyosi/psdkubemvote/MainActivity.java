@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.bagusyosi.psdkubemvote.activity.ProceduresActivity;
+import com.bagusyosi.psdkubemvote.activity.ProfileActivity;
 import com.bagusyosi.psdkubemvote.activity.ResultActivity;
 import com.bagusyosi.psdkubemvote.activity.VotingActivity;
 
@@ -26,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
     CardView cardToRestult;
     @BindView(R.id.linkToResult)
     LinearLayout linkToResult;
+    @BindView(R.id.cardViewProcedures)
+    CardView cardToProcedures;
+    @BindView(R.id.linkToProcedures)
+    LinearLayout linkToProcedures;
+    @BindView(R.id.cardViewProfile)
+    CardView cardToProfile;
+    @BindView(R.id.linkToProfile)
+    LinearLayout linkToProfile;
 
 
     Context context;
@@ -54,6 +64,22 @@ public class MainActivity extends AppCompatActivity {
                 toResult();
             }
         });
+
+        cardToProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linkToProfile.setBackgroundColor(Color.parseColor("#FABE7A"));
+                toProfile();
+            }
+        });
+
+        cardToProcedures.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linkToProcedures.setBackgroundColor(Color.parseColor("#6EF879"));
+                toProcedures();
+            }
+        });
     }
 
     private void toVote() {
@@ -64,12 +90,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(context, ResultActivity.class));
         animasiInOut();
     }
+    private void toProfile() {
+        startActivity(new Intent(context, ProfileActivity.class));
+        animasiInOut();
+    }
+    private void toProcedures() {
+        startActivity(new Intent(context, ProceduresActivity.class));
+        animasiInOut();
+    }
 
     @Override
     protected void onPostResume() {
         super.onPostResume();
         linkToVote.setBackgroundColor(Color.parseColor("#ffeeef"));
         linkToResult.setBackgroundColor(Color.parseColor("#eff4fd"));
+        linkToProfile.setBackgroundColor(Color.parseColor("#FFF7EE"));
+        linkToProcedures.setBackgroundColor(Color.parseColor("#edfaee"));
     }
 
     private void animasiInOut() {
