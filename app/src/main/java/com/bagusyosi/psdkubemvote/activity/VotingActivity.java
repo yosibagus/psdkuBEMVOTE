@@ -3,6 +3,7 @@ package com.bagusyosi.psdkubemvote.activity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.bagusyosi.psdkubemvote.api.BaseApiService;
 import com.bagusyosi.psdkubemvote.api.RestClient;
 import com.bagusyosi.psdkubemvote.model.ModelCapres;
 import com.bagusyosi.psdkubemvote.response.ResponseCapres;
+import com.bagusyosi.psdkubemvote.utils.Constant;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.util.ArrayList;
@@ -61,6 +63,21 @@ public class VotingActivity extends AppCompatActivity {
         rvItemVote.setVisibility(View.GONE);
         modelCapresList = new ArrayList<>();
         adapter = new AdapterCapres(VotingActivity.this, modelCapresList);
+
+        adapter.setOnCapresClickListener(new AdapterCapres.onCapresListerner() {
+            @Override
+            public void onCapresClick(int capresId, int position) {
+                Log.d("index", position + "");
+                ModelCapres capresList = modelCapresList.get(position);
+                Intent in = new Intent(that, ConfirmVotingActivity.class);
+                in.putExtra(Constant.KEY_NOMERURUT, String.valueOf(capresList.getNomerUrutCalon()));
+                in.putExtra(Constant.KEY_NAMACAPRES, capresList.getNamaCapres());
+                in.putExtra(Constant.KEY_NAMACAWAPRES, capresList.getNamaCawapres());
+                in.putExtra(Constant.KEY_SLOGAN, capresList.getSloganCalon());
+                that.startActivity(in);
+                Animatoo.animateSlideUp(mContext);
+            }
+        });
 
         rvItemVote.setLayoutManager(new LinearLayoutManager(this));
         rvItemVote.setAdapter(adapter);

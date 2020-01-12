@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="360dp"
+    android:layout_height="380dp"
     android:elevation="5dp"
     app:cardCornerRadius="6dp"
     app:cardPreventCornerOverlap="false"
@@ -68,15 +68,15 @@
                 android:textAlignment="center"
                 android:text="Makan untuk hidup, bukan hidup untuk makan"/>
 
-<!--            <Button-->
-<!--                android:id="@+id/btnToConfirm"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_width="200dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@color/colorPrimary"-->
-<!--                android:textColor="@color/colorWhite"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:text="Voting"/>-->
+            <Button
+                android:id="@+id/btnToConfirm"
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cs_button"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="10dp"
+                android:text="Vote"/>
 
         </LinearLayout>
 

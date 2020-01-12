@@ -69,6 +69,10 @@ public class AdapterCapres extends RecyclerView.Adapter<AdapterCapres.CapresHold
         return modelCapresList.size();
     }
 
+    public void setOnCapresClickListener(onCapresListerner onCapresClickListeners) {
+        this.onCapresClickListener = onCapresClickListeners;
+    }
+
     public interface onCapresListerner {
         void onCapresClick(int capresId, int position);
     }
